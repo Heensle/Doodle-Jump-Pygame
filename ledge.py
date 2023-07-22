@@ -1,23 +1,17 @@
 import random_num
+import pygame
 
-class platform:
+class Ledge(pygame.sprite.Sprite):
     
     def __init__ (self, image):
-        self.x_pos = random_num.platform_rand_x()
-        self.y_pos = random_num.platform_rand_y()
+        pygame.sprite.Sprite.__init__(self)
+        self.x_pos = random_num.ledge_rand_x()
+        self.y_pos = random_num.ledge_rand_y()
         self.image = image
+        self.rect = self.image.get_rect()
 
-    def x_range (self, start_range, end_range, image):
-        self.x_pos = random_num.platform_controlled_x(start_range, end_range)
-        self.y_pos = random_num.platform_rand_y
-        self.image = image
+def x_range (start_range, end_range):
+        return random_num.ledge_controlled_x(start_range, end_range)
 
-    def relational_y (self, prev_y, image):
-        self.x_pos = random_num.platform_rand_x
-        self.y_pos = random_num.platform_relational_y(prev_y)
-        self.image = image
-
-    def x_range_relational_y (self, start_range, end_range, prev_y, image):
-        self.x_pos = random_num.platform_controlled_x(start_range, end_range)
-        self.y_pos = random_num.platform_relational_y(prev_y)
-        self.image = image
+def relational_y (prev_y):
+        return random_num.ledge_relational_y(prev_y)
