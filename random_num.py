@@ -15,4 +15,4 @@ def ledge_rand_y():
     return random.randint(0, 800)
 
 def ledge_relational_y(prev_y):
-    return random.randint((prev_y - 250), prev_y)
+    return random.randint((prev_y - 200), prev_y)
