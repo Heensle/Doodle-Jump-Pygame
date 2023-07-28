@@ -12,3 +12,5 @@ Concepts I learned on this project:
 - Python for loops
 - Pygame in general
 - Sprite collision
+
+https://github.com/Heensle/Doodle-Jump-Pygame
