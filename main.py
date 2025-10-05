@@ -3,7 +3,7 @@ from collections import namedtuple
 
 import pygame
 
-import doodler
+import Doodler
 import ledge
 
 ScaledImage = namedtuple('ScaledImage', ['path', 'width', 'height'])
@@ -36,7 +36,7 @@ def main():
         in IMAGE_DATA.items()
     }
 
-    doodle = doodler.Doodler(images['doodler_orig'], images['doodle_hitbox'], 240, 700, 5.5)
+    doodle = Doodler.Doodler(images['doodler_orig'], images['doodle_hitbox'], 240, 700, 5.5)
     doodle_prev_bottom = doodle.rect.bottom
     game_end = False
     flipped = False
